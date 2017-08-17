@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>eleme</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: 'eleme';
+      src: url('eleme.woff');
+    }
+
+    .header {
+      background-color: #1e89e0;
+      min-width: 960px;
+      height: 60px;
+    }
+
+    .nav {
+      width: 960px;
+      margin: 0 auto;
+      height: 60px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      height: 60px;
+      line-height: 60px;
+      width: 106px;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    [class*='icon-'] {
+      font-family: 'eleme';
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    [class*='icon-']:before {
+      font-size: 22px;
+      vertical-align: top;
+      -webkit-font-smoothing: antialiased;
+      /*字体平滑*/
+    }
+
+    .title {
+      display: inline-block;
+      height: 60px;
+      line-height: 60px;
+      width: 120px;
+    }
+
+    .title:before {
+      content: '\e92c';
+      color: white;
+      font-size: 32px;
+    }
+
+    .title span {
+      height: 0;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    a.home {
+      width: 112px;
+    }
+
+    .icon-login {
+      float: right;
+    }
+
+    .icon-login:before {
+      content: '\e945';
+      width: 26px;
+      height: 26px;
+    }
+
+    .top-bar-right {
+      font-size: 14px;
+      float: right;
+      width: 500px;
+    }
+
+    .icon-service:before {
+      content: '\e94a';
+    }
+
+    .icon-app:before {
+      content: "\e92e";
+    }
+
+    .icon-service,
+    .rules,
+    .icon-app {
+      color: #d2e7f9;
+    }
+    .icon-service:hover,
+    .rules:hover,
+    .icon-app:hover {
+      color: white;
+    }
+    a.active{
+      background-color: #006bc7;
+    }
+    a[class*='orders']:hover{
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="nav">
+      <h1 class="title icon-tilte">
+        <span>饿了么</span>
+      </h1>
+
+      <a href="#" class="home active">首页
+      </a
+      ><a href="#" class="orders">我的订单</a>
+      <div class="top-bar-right">
+        <a href="#" class="icon-service ">
+          <span>服务中心</span>
+        </a
+        ><a href="#" class="rules">
+          <span>规则中心</span>
+        </a
+        ><a href="#" class="icon-app">
+          <span>手机应用</span>
+        </a
+        ><a href="#" class="icon-login">
+          <span>登录/注册</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+
+  </div>
+  <div class="sideBar">
+
+  </div>
+  <div class="footer">
+
+  </div>
+</body>
+
+</html>
