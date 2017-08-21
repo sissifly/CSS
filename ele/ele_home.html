@@ -14,6 +14,7 @@
       font-family: 'eleme';
       src: url('eleme.woff');
     }
+    /*头部导航*/
 
     .header {
       background-color: #1e89e0;
@@ -31,10 +32,13 @@
       color: white;
       text-decoration: none;
       display: inline-block;
+      text-align: center;
+    }
+
+    .header a {
       height: 60px;
       line-height: 60px;
       width: 106px;
-      text-align: center;
       vertical-align: top;
     }
 
@@ -48,14 +52,14 @@
       font-size: 22px;
       vertical-align: top;
       -webkit-font-smoothing: antialiased;
-      /*字体平滑*/
+      /* 字体平滑 */
     }
 
     .title {
       display: inline-block;
       height: 60px;
       line-height: 60px;
-      width: 120px;
+      width: 130px;
     }
 
     .title:before {
@@ -103,16 +107,102 @@
     .icon-app {
       color: #d2e7f9;
     }
+
     .icon-service:hover,
     .rules:hover,
     .icon-app:hover {
       color: white;
     }
-    a.active{
+
+    .header a.active {
       background-color: #006bc7;
     }
-    a[class*='orders']:hover{
-      background-color: black;
+
+    .header a[class*='orders']:hover {
+      /*background-color: black;*/
+    }
+    /*侧边栏*/
+
+    .sideBar {
+      width: 330px;
+      height: 100%;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 999;
+      display: flex;
+    }
+
+    .sideBar-tab {
+      width: 30px;
+      display: flex;
+      height: 100%;
+      background-color: #504d53;
+      flex-direction: column;
+    }
+
+    .sideBar-content {
+      height: 100%;
+      flex: 1;
+      background-color: #e6e6e6;
+    }
+
+    .sideBar-tab-nav {
+      height: 200px;
+      flex: 6;
+      display: flex;
+      align-items: center;
+    }
+
+    .sideBar-tab-bottom {
+      flex: 1;
+    }
+
+    .sideBar-tab-nav a {
+      width: 30px;
+    }
+
+    .sideBar-tab-content {
+      height: 320px;
+    }
+    /*.sideBar-tab{
+      position: absolute;
+    }
+    [class*='layer-tip']{
+      position: absolute;
+      left: 0;
+    }*/
+
+    .icon-sidebar-orders:before {
+      content: '\e93c';
+    }
+
+    .icon-sidebar-shop:before {
+      content: '\e908';
+    }
+
+    .icon-sidebar-info:before {
+      content: '\e92f';
+    }
+
+    .icon-sidebar-code:before {
+      content: '\e946';
+    }
+
+    .sideBar-tab [class*='icon-sidebar']:before {
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    .sideBar-line {
+      border-top: 1px solid #737074;
+      height: 0;
+      margin: 10px 6px;
+    }
+
+    .sideBar-shop {
+      color: #ccc;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -143,10 +233,32 @@
       </div>
     </div>
   </div>
-  <div class="content">
 
-  </div>
   <div class="sideBar">
+    <div class="sideBar-tab">
+      <div class="sideBar-tab-nav">
+        <div class="sideBar-tab-content">
+          <a href="#" class="icon-sidebar-orders"></a>
+          <div class="sideBar-line"></div>
+          <!-- <div class="layer-tip-orders">我的订单</div> -->
+          <a href="#" class="sideBar-shop icon-sidebar-shop">购物车</a>
+          <div class="sideBar-line"></div>
+          <a href="#" class="icon-sidebar-info"></a>
+          <!-- <div class="layer-tip-info">我的信息</div> -->
+        </div>
+      </div>
+
+      <div class="sideBar-tab-bottom">
+        <div class="sideBar-qr-code icon-sidebar-code"></div>
+        <!-- <div class="layer-tip-qr-code">二维码</div> -->
+        <div class="sideBar-back-top">2</div>
+
+      </div>
+    </div>
+
+    <div class="sideBar-content">
+      222
+    </div>
 
   </div>
   <div class="footer">
