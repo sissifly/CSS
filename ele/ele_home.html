@@ -4,207 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>eleme</title>
-  <style type="text/css">
-    * {
-      margin: 0;
-      padding: 0;
+  <link href="ele.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+    window.onload = function (){
+      document.getElementsByClassName('sideBar-shop')[0].onclick = function () {
+        var target = document.getElementsByClassName('sideBar')[0];
+        if (target.classList.contains("sideBar-hide")){
+          target.classList.remove("sideBar-hide");
+          target.classList.add("sideBar-show");
+        } else {
+          target.classList.remove("sideBar-show");
+          target.classList.add("sideBar-hide");
+        }
+      }
     }
-
-    @font-face {
-      font-family: 'eleme';
-      src: url('eleme.woff');
-    }
-    /*头部导航*/
-
-    .header {
-      background-color: #1e89e0;
-      min-width: 960px;
-      height: 60px;
-    }
-
-    .nav {
-      width: 960px;
-      margin: 0 auto;
-      height: 60px;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-    }
-
-    .header a {
-      height: 60px;
-      line-height: 60px;
-      width: 106px;
-      vertical-align: top;
-    }
-
-    [class*='icon-'] {
-      font-family: 'eleme';
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    [class*='icon-']:before {
-      font-size: 22px;
-      vertical-align: top;
-      -webkit-font-smoothing: antialiased;
-      /* 字体平滑 */
-    }
-
-    .title {
-      display: inline-block;
-      height: 60px;
-      line-height: 60px;
-      width: 130px;
-    }
-
-    .title:before {
-      content: '\e92c';
-      color: white;
-      font-size: 32px;
-    }
-
-    .title span {
-      height: 0;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    a.home {
-      width: 112px;
-    }
-
-    .icon-login {
-      float: right;
-    }
-
-    .icon-login:before {
-      content: '\e945';
-      width: 26px;
-      height: 26px;
-    }
-
-    .top-bar-right {
-      font-size: 14px;
-      float: right;
-      width: 500px;
-    }
-
-    .icon-service:before {
-      content: '\e94a';
-    }
-
-    .icon-app:before {
-      content: "\e92e";
-    }
-
-    .icon-service,
-    .rules,
-    .icon-app {
-      color: #d2e7f9;
-    }
-
-    .icon-service:hover,
-    .rules:hover,
-    .icon-app:hover {
-      color: white;
-    }
-
-    .header a.active {
-      background-color: #006bc7;
-    }
-
-    .header a[class*='orders']:hover {
-      /*background-color: black;*/
-    }
-    /*侧边栏*/
-
-    .sideBar {
-      width: 330px;
-      height: 100%;
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 999;
-      display: flex;
-    }
-
-    .sideBar-tab {
-      width: 30px;
-      display: flex;
-      height: 100%;
-      background-color: #504d53;
-      flex-direction: column;
-    }
-
-    .sideBar-content {
-      height: 100%;
-      flex: 1;
-      background-color: #e6e6e6;
-    }
-
-    .sideBar-tab-nav {
-      height: 200px;
-      flex: 6;
-      display: flex;
-      align-items: center;
-    }
-
-    .sideBar-tab-bottom {
-      flex: 1;
-    }
-
-    .sideBar-tab-nav a {
-      width: 30px;
-    }
-
-    .sideBar-tab-content {
-      height: 320px;
-    }
-    /*.sideBar-tab{
-      position: absolute;
-    }
-    [class*='layer-tip']{
-      position: absolute;
-      left: 0;
-    }*/
-
-    .icon-sidebar-orders:before {
-      content: '\e93c';
-    }
-
-    .icon-sidebar-shop:before {
-      content: '\e908';
-    }
-
-    .icon-sidebar-info:before {
-      content: '\e92f';
-    }
-
-    .icon-sidebar-code:before {
-      content: '\e946';
-    }
-
-    .sideBar-tab [class*='icon-sidebar']:before {
-      font-size: 20px;
-      color: #ccc;
-    }
-
-    .sideBar-line {
-      border-top: 1px solid #737074;
-      height: 0;
-      margin: 10px 6px;
-    }
-
-    .sideBar-shop {
-      color: #ccc;
-      font-size: 14px;
-    }
-  </style>
+  </script>
 </head>
 
 <body>
@@ -234,13 +48,13 @@
     </div>
   </div>
 
-  <div class="sideBar">
+  <div class="sideBar sideBar-hide">
     <div class="sideBar-tab">
       <div class="sideBar-tab-nav">
         <div class="sideBar-tab-content">
           <a href="#" class="icon-sidebar-orders"></a>
+          <div class="layer-tip-orders">我的订单</div>
           <div class="sideBar-line"></div>
-          <!-- <div class="layer-tip-orders">我的订单</div> -->
           <a href="#" class="sideBar-shop icon-sidebar-shop">购物车</a>
           <div class="sideBar-line"></div>
           <a href="#" class="icon-sidebar-info"></a>
@@ -257,7 +71,16 @@
     </div>
 
     <div class="sideBar-content">
-      222
+      <div class="sideBar-title">
+        <a href="#">购物车</a>
+        <span class="icon-arrow"></span>
+      </div>
+      <div class="shopping">
+        <i class="shop-history icon-history"></i>
+        <h3 class="shopping-h3">购物车空空如也</h3>
+        <span class="shopping-span">快去订餐吧，总有你心仪的美食</span>
+      </div>
+
     </div>
 
   </div>
