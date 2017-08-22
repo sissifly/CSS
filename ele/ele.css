@@ -9,7 +9,7 @@
 }
 
 
-/*头部导航*/
+/*头部导航-start*/
 
 .header {
   background-color: #1e89e0;
@@ -114,20 +114,23 @@ a.home {
 }
 
 
-/*侧边栏*/
+/*头部导航-end*/
+
+
+/*侧边栏-start*/
 
 .sideBar {
   width: 330px;
   height: 100%;
   position: fixed;
-  right: -300px;
+  right: -295px;
   top: 0;
   z-index: 999;
   display: flex;
 }
 
 .sideBar-tab {
-  width: 30px;
+  width: 35px;
   display: flex;
   height: 100%;
   background-color: #504d53;
@@ -152,7 +155,7 @@ a.home {
 }
 
 .sideBar-tab-nav a {
-  width: 30px;
+  width: 35px;
   padding: 8px 0;
 }
 
@@ -204,13 +207,13 @@ a.home {
     right: 0;
   }
   to {
-    right: -300px;
+    right: -295px;
   }
 }
 
 @keyframes showshopping {
   from {
-    right: -300px;
+    right: -295px;
   }
   to {
     right: 0;
@@ -277,19 +280,8 @@ a.home {
   font-size: 12px;
 }
 
-.side-orders-box {
+.side-orders-box,.side-info-box {
   position: relative;
-}
-
-.layer-tip-orders {
-  position: absolute;
-  width: 70px;
-  border: 1px solid #000;
-  left: -80px;
-  top: 3px;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-right: 6px solid #726F77;
 }
 
 .sideBar-qr-code {
@@ -302,12 +294,64 @@ a.home {
   background-color: #26a2ff;
   color: #fff;
 }
-.icon-sidebar-orders,
-.icon-sidebar-info{
-  color:#ccc;
+
+.icon-sidebar-orders, .icon-sidebar-info {
+  color: #ccc;
 }
+
 .icon-sidebar-shop span {
   display: inline-block;
   width: 20px;
   line-height: 16px;
 }
+
+.layer-tip-orders {
+  position: absolute;
+  left: -80px;
+  width: 64px;
+  top: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgba(8, 8, 8, 0.5);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+span.side-right-arrow {
+  position: absolute;
+  left: 74px;
+  top: 9px;
+  opacity: 1;
+}
+
+
+/*侧边栏-end*/
+
+
+/*箭头样式-start*/
+
+.side-left-arrow {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 6px;
+  width: 6px;
+  border-right: 6px solid rgba(8, 8, 8, 0.5);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.side-right-arrow {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 6px;
+  width: 6px;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid rgba(8, 8, 8, 0.5);
+}
+
+
+/*箭头样式-end*/
