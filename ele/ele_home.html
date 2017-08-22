@@ -4,19 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>eleme</title>
-  <link href="ele.css" rel="stylesheet" type="text/css"/>
+  <link href="ele.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript">
-    window.onload = function (){
-      document.getElementsByClassName('sideBar-shop')[0].onclick = function () {
-        var target = document.getElementsByClassName('sideBar')[0];
-        if (target.classList.contains("sideBar-hide")){
-          target.classList.remove("sideBar-hide");
-          target.classList.add("sideBar-show");
-        } else {
-          target.classList.remove("sideBar-show");
-          target.classList.add("sideBar-hide");
+    window.onload = function() {
+        document.getElementsByClassName('sideBar-shop')[0].onclick = function() {
+          var target = document.getElementsByClassName('sideBar')[0];
+          if (target.classList.contains("sideBar-show")) {
+            target.classList.remove("sideBar-show");
+            target.classList.add("sideBar-hide");
+          } else if (target.classList.contains("sideBar-hide")) {
+            target.classList.remove("sideBar-hide");
+            target.classList.add("sideBar-show");
+          } else {
+            target.classList.add("sideBar-show");
+          }
         }
-      }
     }
   </script>
 </head>
@@ -48,14 +50,18 @@
     </div>
   </div>
 
-  <div class="sideBar sideBar-hide">
+  <div class="sideBar">
     <div class="sideBar-tab">
       <div class="sideBar-tab-nav">
         <div class="sideBar-tab-content">
-          <a href="#" class="icon-sidebar-orders"></a>
-          <div class="layer-tip-orders">我的订单</div>
+          <div class="side-orders-box">
+            <a href="#" class="icon-sidebar-orders"></a>
+            <div class="layer-tip-orders">我的订单<span class="side-left-arrow"></span></div>
+          </div>
           <div class="sideBar-line"></div>
-          <a href="#" class="sideBar-shop icon-sidebar-shop">购物车</a>
+          <a href="#" class="sideBar-shop icon-sidebar-shop">
+            <span>购物车</span>
+          </a>
           <div class="sideBar-line"></div>
           <a href="#" class="icon-sidebar-info"></a>
           <!-- <div class="layer-tip-info">我的信息</div> -->

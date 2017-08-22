@@ -7,6 +7,8 @@
   font-family: 'eleme';
   src: url('eleme.woff');
 }
+
+
 /*头部导航*/
 
 .header {
@@ -110,6 +112,8 @@ a.home {
 .header a[class*='orders']:hover {
   /*background-color: black;*/
 }
+
+
 /*侧边栏*/
 
 .sideBar {
@@ -149,18 +153,12 @@ a.home {
 
 .sideBar-tab-nav a {
   width: 30px;
+  padding: 8px 0;
 }
 
 .sideBar-tab-content {
   height: 320px;
 }
-/*.sideBar-tab{
-  position: absolute;
-}
-[class*='layer-tip']{
-  position: absolute;
-  left: 0;
-}*/
 
 .icon-sidebar-orders:before {
   content: '\e93c';
@@ -180,25 +178,27 @@ a.home {
 
 .sideBar-tab [class*='icon-sidebar']:before {
   font-size: 20px;
-  color: #ccc;
 }
 
 .sideBar-line {
   border-top: 1px solid #737074;
   height: 0;
-  margin: 10px 6px;
+  margin: 5px 6px;
 }
 
 .sideBar-shop {
   color: #ccc;
   font-size: 14px;
 }
+
 .sideBar-hide {
- animation: 0.5s  hideshopping forwards;
+  animation: 0.5s hideshopping forwards;
 }
+
 .sideBar-show {
- animation: 0.5s  showshopping forwards;
+  animation: 0.5s showshopping forwards;
 }
+
 @keyframes hideshopping {
   from {
     right: 0;
@@ -207,6 +207,7 @@ a.home {
     right: -300px;
   }
 }
+
 @keyframes showshopping {
   from {
     right: -300px;
@@ -215,7 +216,8 @@ a.home {
     right: 0;
   }
 }
-.sideBar-title{
+
+.sideBar-title {
   width: 295;
   height: 35px;
   padding: 5px 10px;
@@ -224,44 +226,88 @@ a.home {
   border-bottom: 1px solid #ddd;
   box-sizing: border-box;
 }
-.sideBar-title a{
+
+.sideBar-title a {
   color: #000;
   font-size: 16px;
 }
-.sideBar-title a:hover{
+
+.sideBar-title a:hover {
   text-decoration: underline;
 }
-.sideBar-title span:before{
+
+.sideBar-title span:before {
   content: '\e902';
   font-size: 16px;
 }
-.sideBar-title span{
+
+.sideBar-title span {
   float: right;
   cursor: pointer;
   line-height: 20px;
   margin-left: 15px;
   color: #666;
 }
+
 .shopping {
   padding: 5px 10px;
   font-size: 18px;
   text-align: center;
   color: #333;
 }
+
 .icon-history:before {
   content: '\e920';
   font-size: 50px;
 }
+
 .icon-history {
   color: #999;
   margin: 30px auto 20px;
   display: block;
 }
+
 .shopping-h3 {
   font-weight: 400;
   font-size: 18px;
 }
+
 .shopping-span {
   color: #999;
   font-size: 12px;
+}
+
+.side-orders-box {
+  position: relative;
+}
+
+.layer-tip-orders {
+  position: absolute;
+  width: 70px;
+  border: 1px solid #000;
+  left: -80px;
+  top: 3px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #726F77;
+}
+
+.sideBar-qr-code {
+  text-align: center;
+  padding: 5px 0;
+  color: #ccc;
+}
+
+.icon-sidebar-orders:hover, .icon-sidebar-shop:hover, .sideBar-qr-code:hover, .icon-sidebar-info:hover {
+  background-color: #26a2ff;
+  color: #fff;
+}
+.icon-sidebar-orders,
+.icon-sidebar-info{
+  color:#ccc;
+}
+.icon-sidebar-shop span {
+  display: inline-block;
+  width: 20px;
+  line-height: 16px;
 }
