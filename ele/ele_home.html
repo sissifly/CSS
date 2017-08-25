@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>eleme</title>
-  <link href="ele.css" rel="stylesheet" type="text/css" />
-  <script src="ele.js" charset="utf-8"></script>
+  <link href="css/ele.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -40,8 +39,8 @@
       <div class="sideBar-tab-nav">
         <div class="sideBar-tab-content">
           <div class="side-orders-box">
-            <a href="#" class="icon-sidebar-orders"></a>
-            <div class="layer-tip-right">我的订单</div>
+            <a href="#" class="icon-sidebar-orders layer-tip"></a>
+            <div class="hide">我的订单</div>
           </div>
           <div class="sideBar-line"></div>
           <a href="#" class="sideBar-shop icon-sidebar-shop">
@@ -49,8 +48,8 @@
           </a>
           <div class="sideBar-line"></div>
           <div class="side-info-box">
-            <a href="#" class="icon-sidebar-info"></a>
-            <div class="layer-tip-left">我的信息</div>
+            <a href="#" class="icon-sidebar-info layer-tip"></a>
+            <div class="hide">我的信息</div>
           </div>
         </div>
       </div>
@@ -65,8 +64,10 @@
           </a>
 
         </div>
-        <div class="sideBar-back-top icon-back-top"></div>
-
+        <div class="back-top-box">
+          <div class="sideBar-back-top icon-back-top layer-tip"></div>
+          <div class="hide">回到顶部</div>
+        </div>
       </div>
     </div>
 
@@ -88,5 +89,7 @@
 
   </div>
 </body>
+<script src="libs/jquery-3.2.1.min.js" charset="utf-8"></script>
+<script src="js/ele.js" charset="utf-8"></script>
 
 </html>

@@ -5,9 +5,11 @@
 
 @font-face {
   font-family: 'eleme';
-  src: url('eleme.woff');
+  src: url('../font/eleme.woff');
 }
-
+.hide{
+  display: none;
+}
 
 /*头部导航-start*/
 
@@ -244,7 +246,9 @@ a.home {
   font-size: 14px;
 }
 
-
+.back-top-box{
+  position: relative;
+}
 /*侧边栏内容盒——start*/
 
 .sideBar-title {
