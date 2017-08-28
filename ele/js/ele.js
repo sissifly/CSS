@@ -36,25 +36,32 @@
   });
 
   // 回到顶部
-  var throttle = function(callBack,time){
-    setTimeout(function () {
-      console.log('1');
-      var lastTime = -Infinity;
-      return function () {
-        var currentTime = Date.now();
-        if (currentTime - lastTime >= time ){
-          callBack();
-          lastTime = currentTime;
-        }
+  // 节流
+  var throttle = function(fn,time){
+      var last = -Infinity;
+      return function () { //执行多次
+          var now = Date.now();
+          if (now - last >= time) {
+              fn();
+              last = now;
+          }
       }
-    },time)
   }
-  var scrollEvent = function () {
-    $(window).scroll(function () {
-      console.log('e');
-    });
+  // 防反跳
+  var handle = function () {
+    // 获取滚动距离
+    console.log('12');
+    console.log($(document).scrollTop());
+    if ($(document).scrollTop() > 0){
+        console.log('show');
+        $('.back-top-box').show();
+    } else {
+        console.log('hide');
+        $('.back-top-box').hide();
+    }
   }
-  var time = 1;
-  throttle(scrollEvent,1);
+  var time = 500;
+  $(window).scroll(throttle(handle,time))
+
 
 })();
