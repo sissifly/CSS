@@ -29,39 +29,41 @@
   });
 
   // 侧边栏二维码hover事件
-  $('.sideBar-qr-code').hover(function () {
+  $('.sideBar-qr-code').hover(function() {
     $('.layer-tip-qr-code').show();
-  },function () {
+  }, function() {
     $('.layer-tip-qr-code').hide();
   });
 
   // 回到顶部
-  // 节流
-  var throttle = function(fn,time){
-      var last = -Infinity;
-      return function () { //执行多次
-          var now = Date.now();
-          if (now - last >= time) {
-              fn();
-              last = now;
-          }
-      }
-  }
   // 防反跳
-  var handle = function () {
+  var debounce = function(fn, delay) {
+    var timer;
+
+    return function() {
+
+      var context = this;
+      var args = arguments;
+
+      clearTimeout(timer);
+
+      timer = setTimeout(function() {
+        fn.apply(context, args);
+      }, delay);
+    }
+  };
+
+  var handle = function() {
     // 获取滚动距离
-    console.log('12');
-    console.log($(document).scrollTop());
-    if ($(document).scrollTop() > 0){
-        console.log('show');
-        $('.back-top-box').show();
+    if ($(document).scrollTop() > 0) {
+      $('.back-top-box').show();
     } else {
-        console.log('hide');
-        $('.back-top-box').hide();
+      $('.back-top-box').hide();
     }
   }
-  var time = 500;
-  $(window).scroll(throttle(handle,time))
+
+  var time = 500;//时间1S
+  $(window).scroll(debounce(handle, time))
 
 
 })();
