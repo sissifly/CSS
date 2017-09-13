@@ -555,3 +555,35 @@ a.home {
   line-height: 30px;
 }
 /*搜索框——end*/
+.placeTab{
+  width: 960px;
+  height: 49px;
+  margin: 0 auto;
+}
+.placeTab img{
+  width: 186px;
+  height: 55px;
+  float: right;
+}
+/*商家分类*/
+.shopClassify{
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  display: flex;
+}
+.classifyTitle{
+  width: 60px;
+  height: 26px;
+  padding: 0 10px;
+  margin-right: 8px;
+  color: #999;
+  font-size: 14px;
+}
+.classsifyContent{
+  width: 854px;
+}
+.classsifyContent a{
+  color: #000;
+}
