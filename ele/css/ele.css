@@ -464,10 +464,6 @@ a.home {
   content: "\e951";
 }
 
-
-/*侧边栏-end*/
-
-
 /*侧边栏——媒体查询——只保留购物车图标和回到顶部图标*/
 
 @media (max-height: 520px) {
@@ -475,3 +471,87 @@ a.home {
     display: none;
   }
 }
+
+/*侧边栏-end*/
+
+/*主内容区域——*/
+/*定位——start*/
+.main {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+.container {
+  width: 960px;
+  min-width: 960px;
+  margin: 0 auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 12px;
+}
+.location{
+  display: inline-block;
+}
+.location:first-child span{
+  color: #999;
+  vertical-align: middle;
+}
+.currentLoc{
+  max-width: 138px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 .3rem;
+}
+.changeLoc a{
+  color: #0089dc;
+}
+.currentLoc a{
+  color: #000;
+}
+/*定位——end*/
+/*搜索框——start*/
+.searchBox{
+  width: 282px;
+  height: 32px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  float: right;
+  background-color: #fff;
+  margin: 10px 0;
+  transition: width .5s;
+}
+.transWiden{
+  width: 354px;
+}
+.transNarrow{
+  width: 282px;
+}
+.searchBox input{
+  position: absolute;
+  width: 220px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  border: 0;
+  margin: 4px 0;
+  padding: 0 8px;
+  outline: 0;
+}
+.searchBox a{
+  float: right;
+  width: 46px;
+  text-align: center;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 30px;
+}
+.searchBox a:hover{
+  color: #0089dc;
+}
+.searchBox a::before{
+  font-family: 'eleme';
+  content: '\e949';
+  line-height: 30px;
+}
+/*搜索框——end*/

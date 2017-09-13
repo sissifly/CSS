@@ -65,5 +65,16 @@
   var time = 500;//时间1S
   $(window).scroll(debounce(handle, time))
 
+  $('.searchBox input').on('focus',function (e) {
+    if($('.searchBox').hasClass('transNarrow')){
+      $('.searchBox').removeClass('transNarrow').addClass('transWiden');
+    }else{
+      $('.searchBox').addClass('transWiden');
+    }
+  });
+  $('.searchBox input').on('blur',function (e) {
+    $('.searchBox').removeClass('transWiden').addClass('transNarrow');
+  });
+
 
 })();
