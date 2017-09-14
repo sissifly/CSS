@@ -559,14 +559,16 @@ a.home {
   width: 960px;
   height: 49px;
   margin: 0 auto;
+  border-bottom: 1px #e6e6e6 solid;
+  text-align: end;
 }
 .placeTab img{
   width: 186px;
   height: 55px;
-  float: right;
 }
-/*商家分类*/
+/*商家分类——start*/
 .shopClassify{
+  box-sizing: border-box;
   width: 960px;
   margin: 0 auto;
   border: 1px solid #e6e6e6;
@@ -574,16 +576,99 @@ a.home {
   display: flex;
 }
 .classifyTitle{
-  width: 60px;
+  width: 64px;
   height: 26px;
-  padding: 0 10px;
+  padding: 15px 0px 0px 15px;
   margin-right: 8px;
   color: #999;
   font-size: 14px;
 }
 .classsifyContent{
   width: 854px;
+  padding: 10px;
 }
-.classsifyContent a{
+.firstClassify a, .shopReclassify a{
+  color: #666;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 5px 6px;
+  padding: 0 10px;
+  height: 26px;
+}
+.firstClassify{
+  font-size: 0;
+}
+.firstClassify a:hover{
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  width: 56px;
+}
+/*一级目录点击后*/
+.firstClassify a:last-child,.firstClassify a:first-child{
+  background-color: #f6f6f6;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 16px;
+  margin: 0;
+}
+/*二级目录*/
+.shopReclassify{
+  background-color: #f6f6f6;
+  padding: 6px 0px;
+}
+/*二级目录点击后*/
+.shopReclassify a:first-child{
+    color: #fff;
+    background-color: #0089dc;
+    border-radius: 3px;
+    width: 28px;
+    height: 26px;
+    line-height: 26px;
+    margin: 5px 6px;
+    padding: 0px 10px;
+}
+/*商家分类——end*/
+
+/*店铺——start*/
+.shopsContainer {
+  width: 960px;
+  border: 1px solid #e6e6e6;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #fff;
+}
+.shopsContainer{
+  font-size:0;
+}
+.shop{
+  box-sizing: border-box;
+  width: 320px;
+  height: 140px;
+  border-bottom: 1px #f5f5f5 solid;
   color: #000;
+  display: inline-block;
+  padding: 20px;
+  vertical-align: top;
 }
+.shop div{
+  font-size: 14px;
+}
+.shopLogo,.shopIntroduce{
+  display: inline-block;
+}
+.shopLogo img{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.shopLogo span{
+  color: #999;
+  font-size: 12px;
+}
+.shopLogo{
+  width: 70px;
+  height: 98px;
+  position: relative;
+  left: -20px;
+}
+/*店铺——end*/
