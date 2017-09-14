@@ -10,9 +10,16 @@
 .hide{
   display: none;
 }
-/*测试*/
-body{
-  height: 2000px;
+/*响应式宽度*/
+.nav,.placeTab,.container,.shopClassify,.shopsContainer{
+    width: 1180px;
+    min-width: 960px;
+}
+@media (max-width: 1260px) {
+    .nav,.placeTab,.container,.shopClassify,.shopsContainer{
+        width: 960px;
+    }
+
 }
 /*头部导航-start*/
 
@@ -23,7 +30,6 @@ body{
 }
 
 .nav {
-  width: 960px;
   margin: 0 auto;
   height: 60px;
 }
@@ -481,8 +487,6 @@ a.home {
   width: 100%;
 }
 .container {
-  width: 960px;
-  min-width: 960px;
   margin: 0 auto;
   height: 54px;
   line-height: 54px;
@@ -556,7 +560,6 @@ a.home {
 }
 /*搜索框——end*/
 .placeTab{
-  width: 960px;
   height: 49px;
   margin: 0 auto;
   border-bottom: 1px #e6e6e6 solid;
@@ -569,7 +572,6 @@ a.home {
 /*商家分类——start*/
 .shopClassify{
   box-sizing: border-box;
-  width: 960px;
   margin: 0 auto;
   border: 1px solid #e6e6e6;
   background-color: #fff;
@@ -584,7 +586,7 @@ a.home {
   font-size: 14px;
 }
 .classsifyContent{
-  width: 854px;
+  flex:1;
   padding: 10px;
 }
 .firstClassify a, .shopReclassify a{
@@ -631,7 +633,6 @@ a.home {
 
 /*店铺——start*/
 .shopsContainer {
-  width: 960px;
   border: 1px solid #e6e6e6;
   margin: 0 auto;
   margin-top: 20px;
@@ -639,6 +640,11 @@ a.home {
 }
 .shopsContainer{
   font-size:0;
+}
+@media (max-width:960px) {
+    .shop{
+
+    }
 }
 .shop{
   box-sizing: border-box;
@@ -649,17 +655,20 @@ a.home {
   display: inline-block;
   padding: 20px;
   vertical-align: top;
+  text-align: left;
 }
 .shop div{
   font-size: 14px;
 }
 .shopLogo,.shopIntroduce{
   display: inline-block;
+  text-align: center;
 }
 .shopLogo img{
   width: 70px;
   height: 70px;
   margin-bottom: 10px;
+  display: block;
 }
 .shopLogo span{
   color: #999;
@@ -669,6 +678,5 @@ a.home {
   width: 70px;
   height: 98px;
   position: relative;
-  left: -20px;
 }
 /*店铺——end*/
