@@ -652,7 +652,7 @@ a.home {
   width: 320px;
   height: 140px;
   border-bottom: 1px #f5f5f5 solid;
-  color: #000;
+  color: #999;
   display: flex;
   padding: 20px;
   font-size: 12px;
@@ -669,7 +669,6 @@ a.home {
   display: block; /*去除下方多余空白*/
 }
 .shopLogo span{
-  color: #999;
   font-size: 12px;
 }
 .shopIntroduce{
@@ -704,5 +703,43 @@ span.shopGrade{
 span.shopGrade:before{
   color: #ffc30c;
   z-index: 999;
+}
+.delivCost{
+  margin-top: 3px;
+}
+.activity{
+  margin-top: 9px;
+}
+.activity span{
+  border: 1px solid #999;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+span.ticket,span.insurance,span.newActivity{
+  width: 16px;
+  height: 16px;
+}
+span.newActivity{
+  background: #E75959;
+  border: 1px solid #E75959;
+  color: #fff;
+}
+span.order{
+  color: #14ae18;
+  border: 1px solid #14ae18;
+  line-height: 18px;
+  padding: 0 5px;
+}
+.deliverTimeOut{
+  color: #c00;
+}
+span.relaxing{
+  color: #fff;
+  background: #666;
+  border: 1px solid #666;
+  padding: 0 5px;
 }
 /*店铺——end*/
