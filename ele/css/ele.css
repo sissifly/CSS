@@ -662,7 +662,7 @@ a.home {
 .shopBox:hover{
   background-color: #f5f5f5;
 }
-.shopTitle:hover{
+.shopBox:hover .shopTitle{
   color: #0089dc;
 }
 .shopLogo{
