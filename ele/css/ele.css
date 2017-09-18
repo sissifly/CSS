@@ -641,21 +641,16 @@ a.home {
   display: flex;
   flex-wrap: wrap;
 }
-
-@media (max-width:960px) {
-    .shop{
-
-    }
-}
 .shopBox{
   box-sizing: border-box;
-  width: 320px;
   height: 140px;
   border-bottom: 1px #f5f5f5 solid;
   color: #999;
   display: flex;
   padding: 20px;
   font-size: 12px;
+  flex-grow: 1; /*剩余空间的放大比例*/
+  flex-shrink: 0; /*空间不足,缩小比例,0不缩小*/
 }
 .shopLogo{
   width: 70px;
