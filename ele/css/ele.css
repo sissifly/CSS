@@ -823,6 +823,7 @@ div.loadingMoreShops{
 .icon-weChat,.icon-sina{
   color: #ccc;
   cursor: pointer;
+  display: inline-block;
 }
 .icon-sina:hover{
   color: #fb545f;
@@ -843,4 +844,16 @@ div.loadingMoreShops{
   margin: 0 auto;
   padding-top: 60px;
   text-align: center;
+}
+.icon-weChat{
+  position: relative;
+}
+.footerQc{
+  position: absolute;
+  left:
+}
+.footerQc img{
+  width: 130px;
+  height: 130px;
+  padding: 4px 6px;
 }
