@@ -5,6 +5,9 @@
 body{
   background-color: #f7f7f7;
 }
+html{
+  text-rendering: optimizelegibility;
+}
 @font-face {
   font-family: 'eleme';
   src: url('../font/eleme.woff');
@@ -818,6 +821,9 @@ div.loadingMoreShops{
 .aboutItem{
   margin-bottom: 12px;
 }
+.aboutItem a {
+  color: #666;
+}
 .rightFooter{
   font-size: 14px;
   line-height: 24px;
@@ -902,4 +908,8 @@ div.loadingMoreShops{
 }
 .downloadDescri p{
   font-size: 12px;
+}
+/*copyRight*/
+.footerCopyRight .company{
+  color: #0e0e0e;
 }
