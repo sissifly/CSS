@@ -705,7 +705,7 @@ span.shopGrade{
   position: absolute;
   left: 0;
   top:0;
-  width: 80%;
+  width: 70%;
   overflow: hidden;
 }
 span.shopGrade:before{
@@ -725,6 +725,7 @@ span.shopGrade:before{
   text-align: center;
   margin-right: 3px;
   vertical-align: middle;
+  line-height: 16px;
 }
 span.ticket,span.insurance,span.newActivity{
   width: 16px;
@@ -744,11 +745,15 @@ span.order{
 .deliverTimeOut{
   color: #c00;
 }
+/*商家休息*/
 span.relaxing{
   color: #fff;
   background: #666;
   border: 1px solid #666;
   padding: 0 5px;
+}
+.closeShop{
+  opacity: 0.5;
 }
 /*加载更多商家*/
 .loadMore{
@@ -810,7 +815,7 @@ div.loadingMoreShops{
   font-size: 14px;
   line-height: 30px;
 }
-.aboutService p{
+.aboutItem{
   margin-bottom: 12px;
 }
 .rightFooter{
@@ -848,12 +853,53 @@ div.loadingMoreShops{
 .icon-weChat{
   position: relative;
 }
+
 .footerQc{
+  display: none;
   position: absolute;
-  left:
+  padding: 4px 6px;
+  left: -60px;
+  top: -172px;
+  background-color: #fff;
+  text-align: center;
 }
 .footerQc img{
   width: 130px;
   height: 130px;
-  padding: 4px 6px;
+  display: block;
+}
+.footerQc p{
+  color: #999;
+  line-height: 15px;
+}
+.footerQc::after{
+  position: absolute;
+  top: 167px;
+  left: 63px;
+  content: '';
+  box-sizing: border-box;
+  height: 5px;
+  width: 5px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.download img{
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  vertical-align: middle;
+
+}
+.downloadDescri {
+  display: inline-block;
+  vertical-align: middle;
+}
+.downloadDescri h3{
+  color: #000;
+  margin-bottom: 6px;
+}
+.downloadDescri p{
+  font-size: 12px;
 }
