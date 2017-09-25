@@ -111,7 +111,40 @@ a.home {
 .icon-app:before {
   content: "\e92e";
 }
-
+.icon-app{
+  position: relative;
+}
+.icon-app .dropQr{
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  padding: 3px 10px;
+  line-height: 40px;
+  top: 55px;
+}
+.dropQr::before{
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: -11px;
+  box-sizing: border-box;
+  height: 6px;
+  width: 6px;
+  border-left: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-right: 6px solid transparent;
+}
+.dropQr span{
+  color: #333;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.dropQr img{
+  width: 180px;
+  height: 180px;
+}
 .icon-service, .rules, .icon-app {
   color: #d2e7f9;
 }
@@ -910,6 +943,22 @@ div.loadingMoreShops{
   font-size: 12px;
 }
 /*copyRight*/
+.footerCopyRight {
+  font-family: Palatino,Optima,Georgia,serif;
+}
 .footerCopyRight .company{
   color: #0e0e0e;
+}
+.filing a{
+  color: #999;
+}
+.filing a:hover{
+  color: #333;
+  text-decoration: underline;
+}
+.filingImg{
+  padding: 7px 0;
+}
+.filingImg img{
+  height: 30px; /*为什么设置高度，宽度自动变了*/
 }
