@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #f7f7f7;
+}
+html{
+  text-rendering: optimizelegibility; /*渲染引擎如何渲染字体。浏览器会在速度、清晰度、几何精度之间进行权衡。*/
+  font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+  font-style: normal; /*风格normal:标准，italic:斜体 oblique:倾斜*/
+  font-variant-ligatures: normal; /*字母连接方式*/
+  font-variant-caps: normal; /* */
+  font-variant-numeric: normal; /* */
+  font-weight: 400; /*字体粗细*/
+  font-stretch: normal; /* */
+}
+@font-face {
+  font-family: 'eleme';
+  src: url('../font/eleme.woff');
+}
+.hide{
+  display: none;
+}
+/*响应式宽度——start*/
+.nav,.placeTab,.container,.shopClassify,.shopsContent,.footer,.copyRight{
+    width: 1180px;
+    min-width: 960px;
+}
+@media (max-width: 1260px) {
+    .nav,.placeTab,.container,.shopClassify,.shopsContent,.footer,.copyRight{
+        width: 960px;
+    }
+}
+/*响应式宽度——end*/
+
+/*footer——start*/
+.footerContainer{
+  margin-top: 50px;
+  border-top:  1px solid #eee;
+  font-size: 12px;
+  color: #999;
+}
+.footer{
+  margin: 0 auto;
+  display: flex;
+  margin-top: 30px;
+}
+.footer .line{
+  border-left: 1px solid #000;
+}
+.leftFooter,.rightFooter{
+  flex: 1;
+  display: flex;
+}
+.footerList,.aboutService,.download{
+  flex: 1;
+}
+.footerList a{
+  color: #999;
+  display: block;
+  text-align: left;
+  line-height: 24px;
+}
+.footerList a:first-child{
+  color: #333;
+  font-size: 14px;
+  line-height: 30px;
+}
+.aboutItem{
+  margin-bottom: 12px;
+}
+.aboutItem a {
+  color: #666;
+}
+.rightFooter{
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+  border-left: 1px #e6e6e6 solid;
+  padding-left: 30px;
+}
+.icon-weChat,.icon-sina{
+  color: #ccc;
+  cursor: pointer;
+  display: inline-block;
+}
+.icon-sina:hover{
+  color: #fb545f;
+}
+.icon-weChat:hover{
+  color: #77d175;
+}
+.icon-sina{
+  margin-left: 8px;
+}
+.icon-weChat:before{
+  content: '\e96a';
+}
+.icon-sina:before{
+  content: '\e96b';
+}
+.copyRight{
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 12px;
+}
+.icon-weChat{
+  position: relative;
+}
+
+.footerQc{
+  display: none;
+  position: absolute;
+  padding: 4px 6px;
+  left: -60px;
+  top: -172px;
+  background-color: #fff;
+  text-align: center;
+}
+.footerQc img{
+  width: 130px;
+  height: 130px;
+  display: block;
+}
+.footerQc p{
+  color: #999;
+  line-height: 15px;
+}
+.footerQc::after{
+  position: absolute;
+  top: 167px;
+  left: 63px;
+  content: '';
+  box-sizing: border-box;
+  height: 5px;
+  width: 5px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.download{
+  min-width: 240px;
+}
+.download img{
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  vertical-align: middle;
+
+}
+.downloadDescri {
+  display: inline-block;
+  vertical-align: middle;
+}
+.downloadDescri h3{
+  color: #000;
+  margin-bottom: 6px;
+}
+.downloadDescri p{
+  font-size: 12px;
+}
+/*footer——end*/
+
+
+/*copyRight*/
+.copyRight .company{
+  color: #0e0e0e;
+}
+.filing{
+  font-family: Palatino, Optima, Georgia, serif;
+}
+.filing a{
+  color: #999;
+}
+.filing a:hover{
+  color: #333;
+  text-decoration: underline;
+}
+.filingImg{
+  padding: 7px 0;
+}
+.filingImg img{
+  height: 30px; /*为什么设置高度，宽度自动变了*/
+}
+/*copyRight——end*/

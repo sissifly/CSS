@@ -75,10 +75,18 @@
   $('.searchBox input').on('blur',function (e) {
     $('.searchBox').removeClass('transWiden').addClass('transNarrow');
   });
+
   $('.icon-weChat').hover(function () {
     $('.footerQc').show();
   },function(){
     $('.footerQc').hide();
   });
+
+  $('.icon-app').hover(function () {
+    $('.dropQr').show();
+  }, function () {
+    $('.dropQr').hide();
+  });
+
 
 })();
